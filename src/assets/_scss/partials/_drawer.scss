@@ -16,11 +16,11 @@
   bottom: 0;
   z-index: -1;
 
-  .drawer-open & {
+  /*.drawer-open & {
     display: block;
     left: 280px;
     z-index: 1000;
-  }
+  }*/
 }
 
 .drawer-button {

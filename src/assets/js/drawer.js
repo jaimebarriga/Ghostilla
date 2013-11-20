@@ -12,7 +12,7 @@ var Drawer = (function ($, Mzr) {
 
     var _body = $('body'),
         _container = $('#container'),
-        _overlay = $('.drawer-overlay');
+        _overlay = $('#container');
 
     var module = {
         open: function() {

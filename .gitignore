@@ -73,3 +73,9 @@ src/assets/_components/*
 
 # Ghostilla
 build
+src
+bower.json
+Gemfile
+Gruntfile.js
+package.json
+

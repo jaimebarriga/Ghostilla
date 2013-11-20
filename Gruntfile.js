@@ -232,7 +232,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= dir.src %><%= dir.sass %>',
           src: '*.{sass,scss}',
-          dest: '<%= dir.tmp %><%= dir.css %>',
+          dest: '<%= dir.src %>/assets/css',
           ext: '.css'
         }]
       }
@@ -319,7 +319,8 @@ module.exports = function(grunt) {
               '<%= dir.fonts %>/**/*'
             ],
             dest: '<%= dir.build %>'
-          }
+          },
+
         ]
       },
       release: {
@@ -409,13 +410,14 @@ module.exports = function(grunt) {
     'useminPrepare',
     'concat',
     'cssmin',
+    'copy:build',
     'uglify',
     'rev',
-    'copy:build',
     'usemin',
     'concurrent:build',
     'csso:build'
   ]);
+
 
   /**
    * Release task
@@ -426,7 +428,7 @@ module.exports = function(grunt) {
     'release',
     'Build, move builded files to root, bump and update changelog',
     function(versionType) {
-      grunt.task.run('push:' + (versionType || '') + ':bump-only');
+      //grunt.task.run('push:' + (versionType || '') + ':bump-only');
       grunt.task.run([
         'build',
         'clean:release',
@@ -434,7 +436,7 @@ module.exports = function(grunt) {
         'clean:build',
         'changelog'
       ]);
-      grunt.task.run('push-commit');
+      //grunt.task.run('push-commit');
     }
   );
 
@@ -443,7 +445,7 @@ module.exports = function(grunt) {
    * Run `grunt` on the command line
    */
   grunt.registerTask('default', [
-    'build',
-    'report'
+    'build'
+    //'report'
   ]);
 };

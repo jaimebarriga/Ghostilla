@@ -58,13 +58,16 @@
 
       $document.pjax('a[data-pjax]', '[data-pjax-container]');
 
+      /*
       $document.on('submit', 'form[data-pjax]', function(e) {
         $.pjax.submit(e, '[data-pjax-container]')
       })
+      */
     }
 
     // Data API bindings
     // =================
+
     $document.on('click', '[data-action]', function(e) {
       var _self = $(this),
          action = _self.data('action');
@@ -117,7 +120,7 @@
 
       return false;
     });
-
+    
     // Async load images
     $('[data-load-image]', $body).each(function() {
       ImageLoader.load($(this));
@@ -125,6 +128,7 @@
 
     // Hide drawer button on scroll for best readability
     // =================
+    /*
     $surface.on('scroll', function() {
       var offset = $surface.scrollTop(),
           btn = $('#drawer-button');
@@ -134,7 +138,7 @@
         btn.addClass('drawer-button-hidden');
       }
     });
-
+    */
     // Smooth scrolling for same page anchors
     // =================
     $document.on('click', 'a[href*=#]:not([href=#])', function(e) {
@@ -153,6 +157,18 @@
       }
     });
 
+    var random = Math.floor(Math.random()*100) + 20;
+    var coverImage = $('.cover-image');
+    coverImage.css('background-position',''+random+'% 50%');
+    var wrapper = $('.wrapper');
+    var wrapperContainerHeight = $('.wrapper-container').height();
+    var clientHeight = document.body.clientHeight;
+
+    wrapper.on('scroll', function(e) {
+        var s = $(this).scrollTop(),
+        scrollPercent = (s / (wrapperContainerHeight - clientHeight)) * 100;
+        coverImage.css('background-position',''+(random+scrollPercent/5)+'% 50%');
+    });
   });
 
 })(jQuery, window, document);

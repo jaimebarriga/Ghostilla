@@ -21,7 +21,21 @@
   top: 0;
   left: 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.3);
+  transition: background-position 0.0s linear;
+  //animation: translator 300s infinite;
+  //-webkit-animation: translator 300s infinite;
 }
+/*
+@keyframes translator {
+  from {background-position: 0% 50%}
+  to {background-position: 500% 50%}
+}
+
+@-webkit-keyframes translator {
+  from {background-position: 0% 50%;}
+  to {background-position: 500% 50%;}
+}
+*/
 
 .cover-container {
   position: absolute;
