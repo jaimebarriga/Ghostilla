@@ -1,8 +1,71 @@
-.header {
+#site-head {
+    width: 100%;
+    height: 65%;
+    background: url('../assets/main.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 30px;
+    
+    h1, h2 {
+        font-size: 43px;
+        text-align: center;
+        color: #fff;
+        font-weight: 100;
+        text-transform: uppercase;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
 
+    h2{
+        font-size:20px;
+        letter-spacing:4px;
+    }
 }
-.logo {
-  img {
 
-  }
+#logo {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 60px;
+    float: left;
 }
+
+#title {
+    position: absolute;
+    display: block;
+    z-index: 9;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    top: 30%;
+}
+
+#top-nav{
+    float: right;
+    margin-right: 30px;
+    margin-top: 8px;
+}
+
+#top-nav a{
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    padding-bottom: 7px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 15px;
+    border: 1px solid transparent;
+}
+
+#top-nav a:hover{
+    border-color: #fff;
+}
+
+img[alt="main-image"]{display:none;}
+

@@ -1,9 +1,22 @@
 {{!< default}}
 
+<header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+  <a href="/" id="logo">Jaime Barriga.</a>
+  {{> links}}
+  
+  <!--<div class="cf"></div>-->
+  
+  {{#post}}
+  
+  <div id="title">
+    <h1>{{title}}</h1>
+    <h2>{{date format='YYYY-MM-DD'}}</h2>
+  </div>
+</header>
+
 <section class="wrapper wrapper-post">
   <div class="wrapper-container">
     <article itemscope itemtype="http://schema.org/BlogPosting" role="article" class="post {{post_class}}">
-      {{#post}}
         <section class="post-container">
           <header class="post-header">
             <ul class="post-meta-list">
@@ -17,11 +30,13 @@
                   <span itemprop="{{#if @first}}articleSection{{else}}keywords{{/if}}">{{name}}</span>
                 {{/foreach}}
               </li>
+              <!--
               <li class="post-meta-item">
                 <a href="{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
               </li>
+              -->
             </ul>
-            <h1 itemprop="name headline" class="post-title"><a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</a></h1>
+            <!--<h1 itemprop="name headline" class="post-title"><a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</a></h1>-->
             {{! A subtitle not available in Ghosts yet }}
             <!--h2 itemprop="about" class="post-subtitle"></h2-->
           </header>
@@ -32,12 +47,14 @@
                   <img src="{{author.image}}" alt="{{author.name}}">
                 </a>
               {{/if}}
+              <!--
               <div class="post-author-info">
                 <a href="{{author.website}}" class="post-author-name">
                   {{author.name}}
                 </a>
                 <p class="post-author-bio">{{author.bio}}</p>
               </div>
+              -->
             </div>
           </aside>
           <div itemprop="articleBody" class="post-body">
@@ -67,7 +84,8 @@
           </footer>
         </section>
       {{/post}}
-      <!--<section itemprop="comment" class="post-comments">
+      <!--
+      <section itemprop="comment" class="post-comments">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
           {{> custom/config}}
@@ -80,9 +98,11 @@
               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
           })();
         </script>
-      </section>-->
+      </section>
+      -->
     </article>
 
-    {{> footer this}}
   </div>
 </section>
+
+{{> footer_post this}}

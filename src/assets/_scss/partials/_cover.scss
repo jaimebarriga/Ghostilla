@@ -38,6 +38,7 @@
 */
 
 .cover-container {
+  font-family: "Lato", sans-serif;
   position: absolute;
   bottom: 0;
   padding: 50px 10% 10%;
@@ -74,11 +75,27 @@
 
 .cover-title {
   font-size: 32px;
-  line-height: 1;
-  margin-bottom: 12px;
+  line-height: 48px;
+  font-weight: normal;
 }
 
 .cover-description {
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0;
+  padding: 8px 0;
+  color: #ccc;
 }
+
+.cover-footer {
+  padding: 8px 0;
+  a {
+    color: #f8ca00;
+    text-decoration: none;
+    background: transparent;
+    font-family: FontAwesome;
+  }
+}
+
+

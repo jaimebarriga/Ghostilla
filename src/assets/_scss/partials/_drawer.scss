@@ -25,7 +25,7 @@
 
 .drawer-button {
   position: absolute;
-  top: 10px;
+  top: 30px;
   left: 10px;
   width: 45px;
   height: 45px;
@@ -82,11 +82,13 @@
 
 .drawer-list-item {
   line-height: 1.7;
+  cursor: pointer;
 
-  a {
+  span {
+    display: inline-block;
     font-family: $title-font-family;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 13px;
     color: $drawer-text-color;
     text-decoration: none;
     opacity: .7;
@@ -102,5 +104,9 @@
       margin-right: 7px;
       font-size: 22px;
     }
+  }
+
+  &:hover {
+    background-color: rgba(112,112,112,0.3);
   }
 }

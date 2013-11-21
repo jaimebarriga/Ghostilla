@@ -26,7 +26,7 @@ var Drawer = (function ($, Mzr) {
         },
         bindOverlay: function() {
           _overlay.on('click', function(e) {
-            e.preventDefault();
+            //e.preventDefault();
 
             if(_body.hasClass('drawer-open')) {
               module.close();

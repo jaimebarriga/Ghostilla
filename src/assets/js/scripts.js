@@ -20,7 +20,7 @@
     // PrismJS handler
     // =================
     Prism.languages.html = Prism.languages.markup;
-
+    
     var _prismHandler = function() {
       $('code').not('[class*="language-"]').addClass(function() {
         var _lang = $(this).attr('class');
@@ -31,10 +31,11 @@
     };
 
     _prismHandler();
-
+    
     // PJax bindings
     // =================
     if ($.support.pjax) {
+      
       $document.on('pjax:start', function() {
         NProgress.start();
 
@@ -45,7 +46,8 @@
         if(Drawer.isOpen())
           Drawer.close();
       });
-
+      
+      
       $document.on('pjax:end', function() {
         if(ga !== undefined) {
           ga('set', 'location', window.location.href);
@@ -55,19 +57,19 @@
         _prismHandler();
         NProgress.done();
       });
+      
+      //$document.pjax('[data-pjax]', '[data-pjax-container]');
 
-      $document.pjax('a[data-pjax]', '[data-pjax-container]');
-
-      /*
+      
       $document.on('submit', 'form[data-pjax]', function(e) {
         $.pjax.submit(e, '[data-pjax-container]')
       })
-      */
+      
     }
 
     // Data API bindings
     // =================
-
+    
     $document.on('click', '[data-action]', function(e) {
       var _self = $(this),
          action = _self.data('action');
@@ -122,10 +124,11 @@
     });
     
     // Async load images
+    
     $('[data-load-image]', $body).each(function() {
       ImageLoader.load($(this));
     });
-
+    
     // Hide drawer button on scroll for best readability
     // =================
     /*
@@ -141,6 +144,7 @@
     */
     // Smooth scrolling for same page anchors
     // =================
+    
     $document.on('click', 'a[href*=#]:not([href=#])', function(e) {
       e.preventDefault();
 
@@ -169,6 +173,15 @@
         scrollPercent = (s / (wrapperContainerHeight - clientHeight)) * 100;
         coverImage.css('background-position',''+(random+scrollPercent/5)+'% 50%');
     });
+
+    var mainImage = $('img[alt="main-image"]');
+  
+    if ( mainImage.length > 0){
+        mainImageSource = mainImage.attr('src');
+        $('header').css('background-image','url('+mainImageSource+')');
+        mainImage.remove();
+    }
+
   });
 
 })(jQuery, window, document);

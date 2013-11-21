@@ -45,11 +45,6 @@ module.exports = function(grunt) {
     tag: {
       banner: '/*!\n' +
               ' * <%= pkg.name %>\n' +
-              ' * <%= pkg.description %>\n' +
-              ' * <%= pkg.url %>\n' +
-              ' * @author <%= pkg.author.name %> <%= pkg.author.url %>\n' +
-              ' * @version <%= pkg.version %>\n' +
-              ' * Copyright <%= pkg.copyright %>. <%= pkg.license %> licensed.\n' +
               ' */\n'
     },
 

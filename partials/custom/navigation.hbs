@@ -1,20 +1,42 @@
-{{! Template
-
-<li class="drawer-list-item">
-  <a href="#" title="My awesome menu link">
-    My menu link
-  </a>
-</li>
-
-}}
-
-<li class="drawer-list-item">
-  <a href="/">
-    <i class="fa fa-home fa-lg fa-fw"></i>Home
-  </a>
-</li>
-<li class="drawer-list-item">
-  <a href="{{@blog.url}}/rss/">
-    <i class="fa fa-rss fa-lg fa-fw"></i>Subscribe to Feed
-  </a>
-</li>
+<a href="\">
+    <li class="drawer-list-item">
+        <span>
+            <i class="fa fa-home fa-lg fa-fw"></i>Home
+        </span>
+    </li>
+</a>
+<a href="/the-beginning">
+    <li class="drawer-list-item">
+        <span href="/the-beginning">
+            <i class="fa fa-question-circle fa-lg fa-fw"></i>About
+        </span>
+    </li>
+</a>
+<a href="http://www.twitter.com/jabcolo33" target="_blank">
+    <li class="drawer-list-item">
+        <span href="http://www.twitter.com/jabcolo33" target="_blank">
+            <i class="fa fa-twitter fa-lg fa-fw"></i>Twitter
+        </span>
+    </li>
+</a>
+<a href="http://www.github.com/jaimebarriga" target="_blank">
+    <li class="drawer-list-item">
+        <span>
+            <i class="fa fa-github fa-lg fa-fw"></i>Github
+        </span>
+    </li>
+</a>
+<a href="http://www.linkedin.com/in/jbarriga" target="_blank">
+    <li class="drawer-list-item">
+        <span>
+            <i class="fa fa-linkedin fa-lg fa-fw"></i>LinkedIn
+        </span>
+    </li>
+</a>
+<a href="{{@blog.url}}/rss/">
+    <li class="drawer-list-item">
+        <span>
+            <i class="fa fa-rss fa-lg fa-fw"></i>Subscribe to Feed
+        </span>
+    </li>
+</a>
