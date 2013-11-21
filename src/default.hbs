@@ -29,8 +29,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400|Lato:300,400,700,900" rel="stylesheet">
 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
     <!-- build:css /assets/css/main.min.css -->
-    <link rel="stylesheet" href="/assets/_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/assets/_components/nprogress/nprogress.css">
     <link rel="stylesheet" href="/assets/_components/prismjs/prism.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -67,21 +68,15 @@
     <!-- endbuild -->
 
     <script type="text/javascript">
-      {{> custom/config}}
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28990601-2']);
+    _gaq.push(['_trackPageview']);
 
-      (function(g,h,o,s,t,z){g.GoogleAnalyticsObject=s;g[s]||(g[s]=
-      function(){(g[s].q=g[s].q||[]).push(arguments)});g[s].s=+new Date;
-      t=h.createElement(o);z=h.getElementsByTagName(o)[0];
-      t.src='//www.google-analytics.com/analytics.js';
-      z.parentNode.insertBefore(t,z)}(window,document,'script','ga'));
-      ga('create',ga_ua);ga('send','pageview');
-
-      (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
     </script>
   </body>
 </html>
