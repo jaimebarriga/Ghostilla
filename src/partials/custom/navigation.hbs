@@ -1,13 +1,13 @@
-<a href="\">
+<a href="/blog/">
     <li class="drawer-list-item">
         <span>
-            <i class="fa fa-home fa-lg fa-fw"></i>Home
+            <i class="fa fa-home fa-lg fa-fw"></i>Home {{@blog.url}}
         </span>
     </li>
 </a>
-<a href="/the-beginning">
+<a href="/blog/the-beginning">
     <li class="drawer-list-item">
-        <span href="/the-beginning">
+        <span href="{{blog.url}}/the-beginning/">
             <i class="fa fa-question-circle fa-lg fa-fw"></i>About
         </span>
     </li>
@@ -33,7 +33,7 @@
         </span>
     </li>
 </a>
-<a href="{{@blog.url}}/rss/">
+<a href="/blog/rss/">
     <li class="drawer-list-item">
         <span>
             <i class="fa fa-rss fa-lg fa-fw"></i>Subscribe to Feed
