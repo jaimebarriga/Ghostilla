@@ -1,6 +1,7 @@
 # Ignore hidden folders
 # This takes care of .tmp, .sass-cache, and many others
-.*/
+.tmp
+.sass-cache
 
 # OSX
 ._*
@@ -73,9 +74,5 @@ src/assets/_components/*
 
 # Ghostilla
 build
-src
-bower.json
-Gemfile
-Gruntfile.js
-package.json
+
 
